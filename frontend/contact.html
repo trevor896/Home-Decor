@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Contact Home Decor with questions about furniture, services, or your order.">
+    <title>Contact Us | Home Decor</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar" aria-label="Main navigation">
+        <a class="brand" href="index.html">Home Decor</a>
+        <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="navbar-menu" id="primary-navigation">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+          <a class="contact-button" href="contact.html" aria-current="page">Contact Us</a>
+        </div>
+      </nav>
+    </header>
+    <main class="contact-page">
+      <section class="contact-intro" aria-labelledby="contact-title">
+        <p class="section-eyebrow">We’re here to help</p>
+        <h1 id="contact-title">Get in Touch</h1>
+        <p>Have a question about furniture or planning your space? Send us a note and our team will be happy to help.</p>
+      </section>
+      <section class="contact-panel" aria-label="Contact Home Decor">
+        <aside class="contact-information">
+          <p class="contact-information-eyebrow">Home Decor</p>
+          <h2>Contact Information</h2>
+          <p class="contact-information-copy">Reach out with questions about our furniture, services, or your next project.</p>
+          <div class="contact-detail">
+            <span class="contact-detail-icon" aria-hidden="true">@</span>
+            <div><span>Email</span><a href="mailto:hello@homedecor.example">hello@homedecor.example</a></div>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-detail-icon" aria-hidden="true">P</span>
+            <div><span>Phone</span><a href="tel:+10000000000">(000) 000-0000</a></div>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-detail-icon" aria-hidden="true">⌖</span>
+            <div><span>Location</span><p>Store address to be confirmed<br>Botswana</p></div>
+          </div>
+          <p class="contact-placeholder-note">Contact details shown are placeholders.</p>
+        </aside>
+        <form class="contact-form" id="contact-form">
+          <div class="contact-form-row">
+            <label class="contact-field">
+              <span>Your Name</span>
+              <input name="name" type="text" placeholder="e.g. Jane Doe" autocomplete="name" required>
+            </label>
+            <label class="contact-field">
+              <span>Your Email</span>
+              <input name="email" type="email" placeholder="e.g. jane@example.com" autocomplete="email" required>
+            </label>
+          </div>
+          <label class="contact-field">
+            <span>Subject</span>
+            <input name="subject" type="text" placeholder="What can we help you with?" required>
+          </label>
+          <label class="contact-field contact-message-field">
+            <span>Message</span>
+            <textarea name="message" rows="4" placeholder="Tell us a little about what you’re looking for…" required></textarea>
+          </label>
+          <div class="contact-form-submit">
+            <button class="contact-submit-button" type="submit">Send Message</button>
+            <p class="contact-form-status" id="contact-form-status" aria-live="polite"></p>
+          </div>
+          <p class="contact-form-note">This form is a preview and is not connected to a message service yet.</p>
+        </form>
+      </section>
+      <section class="contact-map-section" aria-labelledby="contact-map-title">
+        <div class="contact-map-heading">
+          <div>
+            <p class="section-eyebrow">Come say hello</p>
+            <h2 id="contact-map-title">Find Us</h2>
+          </div>
+          <p>The map is a location preview. Replace it with the store’s verified address when available.</p>
+        </div>
+        <div class="contact-map-frame">
+          <iframe title="Map preview of Botswana" src="https://www.openstreetmap.org/export/embed.html?bbox=19.9%2C-26.9%2C29.4%2C-17.7&amp;layer=mapnik" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-frame">
+        <div class="footer-panel">
+          <div class="footer-about">
+            <a class="footer-brand" href="index.html">Home Decor</a>
+            <p>Furniture and thoughtful design to make every room feel comfortable, considered, and yours.</p>
+            <nav class="footer-socials" aria-label="Social media">
+              <a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp profile"><img src="assets/icons/whatsapp.svg" alt=""></a>
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile"><img src="assets/icons/facebook.svg" alt=""></a>
+              <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="TikTok profile"><img src="assets/icons/tiktok.svg" alt=""></a>
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile"><img src="assets/icons/instagram.svg" alt=""></a>
+            </nav>
+          </div>
+          <nav class="footer-column" aria-label="Footer navigation">
+            <h2>Explore</h2>
+            <ul><li><a href="index.html">Home</a></li><li><a href="products.html">Products</a></li><li><a href="services.html">Services</a></li><li><a href="about.html">About Us</a></li><li><a href="faq.html">FAQ</a></li></ul>
+          </nav>
+          <div class="footer-column footer-contact">
+            <h2>Contact</h2>
+            <address>123 Example Road<br>Your City, ST 00000</address>
+            <a href="mailto:hello@homedecor.example">hello@homedecor.example</a>
+            <a href="tel:+10000000000">(000) 000-0000</a>
+          </div>
+          <p class="footer-bottom">&copy; 2026 Home Decor. Replace the sample contact details and social profile links before publishing.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore furniture and home decor from Home Decor.">
+    <title>Products | Home Decor</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar" aria-label="Main navigation">
+        <a class="brand" href="index.html">Home Decor</a>
+        <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="navbar-menu" id="primary-navigation">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html" aria-current="page">Products</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+          <a class="contact-button" href="contact.html">Contact Us</a>
+        </div>
+      </nav>
+    </header>
+    <main class="catalog-page">
+      <section class="catalog-intro" aria-labelledby="catalog-title">
+        <p class="section-eyebrow" id="catalog-title">The Home Decor collection</p>
+        <p>Explore considered wooden furniture for rooms made to be lived in.</p>
+        <label class="catalog-search">
+          <span class="visually-hidden">Search furniture</span>
+          <input id="product-search" type="search" placeholder="Search furniture, finishes, or rooms" autocomplete="off">
+          <span class="catalog-search-icon" aria-hidden="true"></span>
+        </label>
+      </section>
+      <section class="catalog-layout" aria-label="Furniture catalog">
+        <aside class="catalog-sidebar" id="catalog-filters" aria-labelledby="filter-title">
+          <div class="filter-heading">
+            <h2 id="filter-title">Filter by</h2>
+            <button class="filter-reset" id="clear-filters" type="button">Clear all</button>
+          </div>
+          <div class="filter-group">
+            <label for="filter-type">Type</label>
+            <select id="filter-type">
+              <option value="">All types</option>
+              <option value="chair">Chairs</option>
+              <option value="coffee table">Coffee tables</option>
+              <option value="media wall">Media walls</option>
+              <option value="console">Consoles</option>
+              <option value="shelving">Shelving</option>
+              <option value="sofa">Sofas</option>
+              <option value="vanity">Vanities</option>
+              <option value="wardrobe">Wardrobes</option>
+              <option value="wall unit">Wall units</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="filter-color">Color</label>
+            <select id="filter-color">
+              <option value="">All colors</option>
+              <option value="olive">Olive</option>
+              <option value="walnut">Walnut</option>
+              <option value="oak">Oak</option>
+              <option value="white">White</option>
+              <option value="blue">Blue</option>
+              <option value="cream">Cream</option>
+              <option value="beige">Beige</option>
+              <option value="black">Black</option>
+              <option value="brown">Brown</option>
+              <option value="gray">Gray</option>
+              <option value="red">Red</option>
+              <option value="gold">Gold</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="filter-material">Material</label>
+            <select id="filter-material">
+              <option value="">All materials</option>
+              <option value="wood">Wood finish</option>
+              <option value="painted">Painted finish</option>
+              <option value="fabric">Fabric</option>
+              <option value="glass">Glass</option>
+            </select>
+          </div>
+          <fieldset class="filter-group price-filter">
+            <legend>Example price range (P)</legend>
+            <div class="price-inputs">
+              <label>
+                <span>Min</span>
+                <input id="price-min" type="number" min="0" max="25000" step="100" value="0" inputmode="numeric">
+              </label>
+              <label>
+                <span>Max</span>
+                <input id="price-max" type="number" min="0" max="25000" step="100" value="25000" inputmode="numeric">
+              </label>
+            </div>
+            <p>Displayed prices are examples, not confirmed store prices.</p>
+          </fieldset>
+        </aside>
+        <div class="catalog-results">
+          <div class="catalog-toolbar">
+            <button class="mobile-filter-toggle" id="mobile-filter-toggle" type="button" aria-expanded="false" aria-controls="catalog-filters">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M7 12h10M10 17h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              <span>Filters</span>
+              <span class="mobile-filter-count" id="mobile-filter-count" hidden>0</span>
+            </button>
+            <p id="catalog-result-count" aria-live="polite">15 pieces</p>
+            <label class="sort-control">
+              <span>Sort</span>
+              <select id="sort-products" aria-label="Sort furniture">
+                <option value="featured">Featured</option>
+                <option value="price-low">Price: low to high</option>
+                <option value="price-high">Price: high to low</option>
+                <option value="name">Name</option>
+              </select>
+            </label>
+          </div>
+          <div class="catalog-grid" id="catalog-grid">
+            <article class="catalog-card" data-name="Blue Accent Chair" data-type="chair" data-color="blue cream" data-material="fabric wood" data-price="3900" data-search="blue accent chair upholstered armchair cream cushion wood legs lounge">
+              <div class="catalog-card-image">
+                <img src="assets/images/Product%20(1).jpg" alt="Cream accent chair with blue cushions and wooden frame" loading="lazy">
+                <span class="catalog-card-tag">Seating</span>
+              </div>
+              <div class="catalog-card-info">
+                <div><p class="catalog-card-category">Upholstered accent chair</p><h2>Blue Accent Chair</h2></div>
+                <p class="catalog-card-price">P 3,900 <span>example</span></p>
+              </div>
+              <p class="catalog-card-meta">Blue &amp; cream <span>Fabric + wood</span></p>
+              <a class="catalog-card-link" href="contact.html">Ask about this piece</a>
+            </article>
+            <article class="catalog-card" data-name="Walnut Ladder Shelf" data-type="shelving" data-color="walnut brown" data-material="wood" data-price="4500" data-search="walnut ladder shelf bookcase display shelving plants storage">
+              <div class="catalog-card-image">
+                <img src="assets/images/Product%20(2).jpg" alt="Walnut ladder-style shelving unit with display shelves" loading="lazy">
+                <span class="catalog-card-tag">Shelving</span>
+              </div>
+              <div class="catalog-card-info">
+                <div><p class="catalog-card-category">Display shelving</p><h2>Walnut Ladder Shelf</h2></div>
+                <p class="catalog-card-price">P 4,500 <span>example</span></p>
+              </div>
+              <p class="catalog-card-meta">Walnut <span>Wood finish</span></p>
+              <a class="catalog-card-link" href="contact.html">Ask about this piece</a>
+            </article>
+            <article class="catalog-card" data-name="Warm Oak Vanity Wardrobe" data-type="vanity" data-color="oak beige gold" data-material="wood painted" data-price="16500" data-search="oak vanity wardrobe dressing table bedroom built in closet warm light">
+              <div class="catalog-card-image">
+                <img src="assets/images/Product%20(3).jpg" alt="Warm oak bedroom wardrobe with a lit dressing vanity" loading="lazy">
+                <span class="catalog-card-tag">Bedroom</span>
+              </div>
+              <div class="catalog-card-info">
+                <div><p class="catalog-card-category">Bedroom furniture</p><h2>Warm Oak Vanity Wardrobe</h2></div>
+                <p class="catalog-card-price">P 16,500 <span>example</span></p>
+              </div>
+              <p class="catalog-card-meta">Oak &amp; beige <span>Wood + painted finish</span></p>
+              <a class="catalog-card-link" href="contact.html">Ask about this piece</a>
+            </article>
+            <article class="catalog-card" data-name="Built-In Dressing Suite" data-type="wardrobe" data-color="walnut black gold" data-material="wood painted" data-price="22000" data-search="built in dressing suite wardrobe closet drawers vanity walnut dark wood bedroom">
+              <div class="catalog-card-image">
+                <img src="assets/images/Product%20(4).jpg" alt="Built-in wardrobe and dressing vanity with warm wood and dark drawers" loading="lazy">
+                <span class="catalog-card-tag">Bedroom</span>
+              </div>
+              <div class="catalog-card-info">
+                <div><p class="catalog-card-category">Custom wardrobe</p><h2>Built-In Dressing Suite</h2></div>
+                <p class="catalog-card-price">P 22,000 <span>example</span></p>
+              </div>
+              <p class="catalog-card-meta">Walnut &amp; charcoal <span>Wood + painted finish</span></p>
+              <a class="catalog-card-link" href="contact.html">Ask about this piece</a>
+            </article>
+            <article class="catalog-card" data-name="Dark Frame Wardrobe" data-type="wardrobe" data-color="black walnut" data-material="wood painted" data-price="19500" data-search="dark frame wardrobe closet shelves drawers bedroom storage">
+              <div class="catalog-card-image">
+                <img src="assets/images/Product%20(5).jpg" alt="Dark framed wardrobe with open shelving and wood storage" loading="lazy">
+                <span class="catalog-card-tag">Bedroom</span>
+              </div>
+              <div class="catalog-card-info">
+                <div><p class="catalog-card-category">Wardrobe storage</p><h2>Dark Frame Wardrobe</h2></div>
+                <p class="catalog-card-price">P 19,500 <span>example</span></p>
+              </div>
+              <p class="catalog-card-meta">Charcoal &amp; walnut <span>Wood + painted finish</span></p>
+              <a class="catalog-card-link" href="contact.html">Ask about this piece</a>
+            </article>
+            <article class="catalog-card" data-name="Warm Wood Entertainment Wall" data-type="media wall" data-color="brown walnut gold" data-material="wood painted" data-price="17500" data-search="warm wood entertainment wall tv shelves drawers living room media cabinet">
+              <div class="catalog-card-image">
+                <img src="assets/images/Product%20(6).jpg" alt="Warm wooden entertainment wall with television storage and display shelves" loading="lazy">
+                <span class="catalog-card-tag">Living room</span>
+              </div>
+              <div class="catalog-card-info">
+                <div><p class="catalog-card-category">Entertainment unit</p><h2>Warm Wood Entertainment Wall</h2></div>
+                <p class="catalog-card-price">P 17,500 <span>example</span></p>
+              </div>
+              <p class="catalog-card-meta">Walnut &amp; warm brown <span>Wood + painted finish</span></p>
+              <a class="catalog-card-link" href="contact.html">Ask about this piece</a>
+            </article>
+            <article class="catalog-card" data-name="Curved Lounge Sofa" data-type="sofa" data-color="cream brown" data-material="fabric wood" data-price="18500" data-search="curved lounge sofa sectional cream upholstered timber frame living room seating">
+              <div class="catalog-card-image">
+                <img src="assets/images/Product%20(7).jpg" alt="Curved cream upholstered sofa with a timber base" loading="lazy">
+                <span class="catalog-card-tag">Seating</span>
+              </div>
+              <div class="catalog-card-info">
+                <div><p class="catalog-card-category">Living room seating</p><h2>Curved Lounge Sofa</h2></div>
+                <p class="catalog-card-price">P 18,500 <span>example</span></p>
+              </div>
+              <p class="catalog-card-meta">Cream &amp; walnut <span>Fabric + wood</span></p>
+              <a class="catalog-card-link" href="contact.html">Ask about this piece</a>
+            </article>
+            <article class="catalog-card" data-name="Minimal White TV Unit" data-type="wall unit" data-color="white gray" data-material="wood painted" data-price="12500" data-search="minimal white tv unit media wall floating cabinet modern living room">
+              <div class="catalog-card-image">
+                <img src="assets/images/Product%20(8).jpg" alt="Minimal television wall with white lower cabinets and shelving" loading="lazy">
+                <span class="catalog-card-tag">Living room</span>
+              </div>
+              <div class="catalog-card-info">
+                <div><p class="catalog-card-category">Contemporary TV storage</p><h2>Minimal White TV Unit</h2></div>
+                <p class="catalog-card-price">P 12,500 <span>example</span></p>
+              </div>
+              <p class="catalog-card-meta">White &amp; gray <span>Wood + painted finish</span></p>
+              <a class="catalog-card-link" href="contact.html">Ask about this piece</a>
+            </article>
+            <article class="catalog-card" data-name="Crimson Accent Media Unit" data-type="console" data-color="black red" data-material="wood painted" data-price="9800" data-search="black red media console tv unit low cabinet modern entertainment">
+              <div class="catalog-card-image">
+                <img src="assets/images/Product%20(9).jpg" alt="Low black media console with red accent lighting" loading="lazy">
+                <span class="catalog-card-tag">Storage</span>
+              </div>
+              <div class="catalog-card-info">
+                <div><p class="catalog-card-category">Modern media console</p><h2>Crimson Accent Media Unit</h2></div>
+                <p class="catalog-card-price">P 9,800 <span>example</span></p>
+              </div>
+              <p class="catalog-card-meta">Black &amp; red <span>Wood + painted finish</span></p>
+              <a class="catalog-card-link" href="contact.html">Ask about this piece</a>
+            </article>
+            <article class="catalog-card" data-name="Oak Slat TV Wall" data-type="media wall" data-color="oak walnut" data-material="wood" data-price="16800" data-search="oak slat tv wall entertainment cabinet warm wood shelves">
+              <div class="catalog-card-image"><img src="assets/images/Product%20(10).jpg" alt="Oak slat television wall with built-in display shelving" loading="lazy"><span class="catalog-card-tag">Living room</span></div>
+              <div class="catalog-card-info"><div><p class="catalog-card-category">Built-in entertainment wall</p><h2>Oak Slat TV Wall</h2></div><p class="catalog-card-price">P 16,800 <span>example</span></p></div>
+              <p class="catalog-card-meta">Oak &amp; walnut <span>Wood finish</span></p>
+              <a class="catalog-card-link" href="contact.html">Ask about this piece</a>
+            </article>
+            <article class="catalog-card" data-name="Charcoal Dressing Wardrobe" data-type="wardrobe" data-color="black walnut" data-material="wood painted" data-price="21000" data-search="charcoal dressing wardrobe closet drawers vanity bedroom">
+              <div class="catalog-card-image"><img src="assets/images/Product%20(11).jpg" alt="Charcoal wardrobe with warm wood vanity and drawers" loading="lazy"><span class="catalog-card-tag">Bedroom</span></div>
+              <div class="catalog-card-info"><div><p class="catalog-card-category">Wardrobe and vanity</p><h2>Charcoal Dressing Wardrobe</h2></div><p class="catalog-card-price">P 21,000 <span>example</span></p></div>
+              <p class="catalog-card-meta">Charcoal &amp; walnut <span>Wood + painted finish</span></p>
+              <a class="catalog-card-link" href="contact.html">Ask about this piece</a>
+            </article>
+            <article class="catalog-card" data-name="Walnut Oval Coffee Table" data-type="coffee table" data-color="walnut brown" data-material="wood" data-price="5200" data-search="walnut oval coffee table lounge low living room">
+              <div class="catalog-card-image"><img src="assets/images/Product%20(12).jpg" alt="Oval walnut coffee table in a bright living room" loading="lazy"><span class="catalog-card-tag">Living room</span></div>
+              <div class="catalog-card-info"><div><p class="catalog-card-category">Low-profile table</p><h2>Walnut Oval Coffee Table</h2></div><p class="catalog-card-price">P 5,200 <span>example</span></p></div>
+              <p class="catalog-card-meta">Walnut <span>Wood finish</span></p>
+              <a class="catalog-card-link" href="contact.html">Ask about this piece</a>
+            </article>
+            <article class="catalog-card" data-name="Sculpted Walnut Coffee Table" data-type="coffee table" data-color="walnut brown" data-material="wood" data-price="5600" data-search="sculpted walnut coffee table round oval minimalist lounge">
+              <div class="catalog-card-image"><img src="assets/images/Product%20(13).jpg" alt="Sculpted walnut coffee table with curved base" loading="lazy"><span class="catalog-card-tag">Living room</span></div>
+              <div class="catalog-card-info"><div><p class="catalog-card-category">Contemporary table</p><h2>Sculpted Walnut Coffee Table</h2></div><p class="catalog-card-price">P 5,600 <span>example</span></p></div>
+              <p class="catalog-card-meta">Walnut <span>Wood finish</span></p>
+              <a class="catalog-card-link" href="contact.html">Ask about this piece</a>
+            </article>
+            <article class="catalog-card" data-name="Two-Tier Coffee Table" data-type="coffee table" data-color="walnut brown" data-material="wood" data-price="4900" data-search="two tier walnut coffee table lower shelf storage rectangular">
+              <div class="catalog-card-image"><img src="assets/images/Product%20(14).jpg" alt="Walnut two-tier coffee table with storage shelf" loading="lazy"><span class="catalog-card-tag">Storage</span></div>
+              <div class="catalog-card-info"><div><p class="catalog-card-category">Coffee table with shelf</p><h2>Two-Tier Coffee Table</h2></div><p class="catalog-card-price">P 4,900 <span>example</span></p></div>
+              <p class="catalog-card-meta">Walnut <span>Wood finish</span></p>
+              <a class="catalog-card-link" href="contact.html">Ask about this piece</a>
+            </article>
+            <article class="catalog-card" data-name="White Storage Coffee Table" data-type="coffee table" data-color="white gray" data-material="painted" data-price="4600" data-search="white storage coffee table modern living room box table">
+              <div class="catalog-card-image"><img src="assets/images/Product%20(15).jpg" alt="White geometric coffee table with open storage" loading="lazy"><span class="catalog-card-tag">Living room</span></div>
+              <div class="catalog-card-info"><div><p class="catalog-card-category">Modern storage table</p><h2>White Storage Coffee Table</h2></div><p class="catalog-card-price">P 4,600 <span>example</span></p></div>
+              <p class="catalog-card-meta">White <span>Painted finish</span></p>
+              <a class="catalog-card-link" href="contact.html">Ask about this piece</a>
+            </article>
+          </div>
+          <p class="catalog-empty" id="catalog-empty" hidden>No pieces match those filters. Try adjusting your search.</p>
+          <nav class="catalog-pagination" aria-label="Product pagination">
+            <button class="pagination-arrow" id="previous-product-page" type="button" aria-label="Previous page" aria-disabled="true">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m15 18-6-6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <span class="pagination-status" aria-live="polite">Page 1 of 1</span>
+            <button class="pagination-arrow" id="next-product-page" type="button" aria-label="Next page" aria-disabled="true">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m9 18 6-6-6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </nav>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-frame">
+        <div class="footer-panel">
+          <div class="footer-about">
+            <a class="footer-brand" href="index.html">Home Decor</a>
+            <p>Furniture and thoughtful design to make every room feel comfortable, considered, and yours.</p>
+            <nav class="footer-socials" aria-label="Social media">
+              <a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp profile"><img src="assets/icons/whatsapp.svg" alt=""></a>
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile"><img src="assets/icons/facebook.svg" alt=""></a>
+              <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="TikTok profile"><img src="assets/icons/tiktok.svg" alt=""></a>
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile"><img src="assets/icons/instagram.svg" alt=""></a>
+            </nav>
+          </div>
+          <nav class="footer-column" aria-label="Footer navigation">
+            <h2>Explore</h2>
+            <ul><li><a href="index.html">Home</a></li><li><a href="products.html">Products</a></li><li><a href="services.html">Services</a></li><li><a href="about.html">About Us</a></li><li><a href="faq.html">FAQ</a></li></ul>
+          </nav>
+          <div class="footer-column footer-contact">
+            <h2>Contact</h2>
+            <address>123 Example Road<br>Your City, ST 00000</address>
+            <a href="mailto:hello@homedecor.example">hello@homedecor.example</a>
+            <a href="tel:+10000000000">(000) 000-0000</a>
+          </div>
+          <p class="footer-bottom">&copy; 2026 Home Decor. Replace the sample contact details and social profile links before publishing.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
